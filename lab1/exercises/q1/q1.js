@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $('#one').css("background-color","blue").css("color","red");
+    $('#two').css("background-color","red").css("color","pink");
+    $('#three').css("background-color","yellow").css("color","blue");
+    $('div').css("left","100px");
+    $('button').click(function(){
+    $('div').animate({'margin-left':'10px'});
+    });
+  });

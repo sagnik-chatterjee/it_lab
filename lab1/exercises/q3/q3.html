@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Birthday Card using jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="q3.js"></script>
+  </head>
+  <body>
+    <div style="width: 100%; overflow: hidden; background-color: lightgoldenrodyellow">
+      <div style="width: 600px; float: left">
+        <label for="colors">Choose a background color:</label><br />
+        <select name="colors" id="colors">
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="yellow">Yellow</option>
+        </select>
+        <br /><br />
+        <label for="fonts">Choose a font:</label><br />
+        <select name="fonts" id="fonts">
+          <option value="serif">Serif</option>
+          <option value="sans-serif">Sans-Serif</option>
+          <option value="monospace">Monospace</option>
+          <option value="cursive">Cursive</option>
+          <option value="fantasy">Fantasy</option>
+        </select>
+        <br /><br />
+        <p>Enter a numeric font size :</p>
+        <input type="number" id="fsize" placeholder="enter only numeric value" />
+        <br /><br />
+        <label for="borders">Select a border style:</label><br />
+        <input type="radio" name="borders" value="none" />None<br />
+        <input type="radio" name="borders" value="double" />Double<br />
+        <input type="radio" name="borders" value="solid" />Solid<br />
+        <br />
+        <input type="checkbox" name="check" id="check" />Add default image<br /><br />
+        <p>Enter text here:</p>
+        <textarea id="txtarea" name="txtarea" rows="4" cols="50"></textarea>
+        <br /><br />
+        <button type="submit" id="btn">Update</button>
+      </div>
+      <div
+        id="div2"
+        style="
+          margin-left: 620px;
+          text-align: center;
+          height: 600px;
+          width: 500px;
+        "
+      >
+        <br /><br />
+        <p id="p2"></p>
+        <br /><br />
+        <p id="p3"></p>
+      </div>
+    </div>
+  </body>
+</html>

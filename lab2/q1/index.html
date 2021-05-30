@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <!-- <script type="javascript" src="q1.js" ></script> -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style></style>
+    <title>Student Form Q1</title>
+  </head>
+
+  <body>
+    <div class="container" style="background: orange; margin-top: 3rem">
+      <div class="row justify-content-md-center" style="padding: 1rem">
+        <div class="col-md-12">
+          <p class="text-center font-weight-bold" style="font-size: 2rem">
+            Student Registration Form
+          </p>
+        </div>
+        <div class="col-md-6">
+          <form action="">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender</label><br />
+              <input type="radio" name="gender" id="gender" value="male" /> Male
+              <input type="radio" name="gender" id="gender" value="female" />
+              Female
+              <input
+                type="radio"
+                name="gender"
+                id="gender"
+                value="other"
+                checked
+              />
+              Others
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label><br />
+              <textarea
+                name="message"
+                id="message"
+                cols="50"
+                rows="3"
+                placeholder="Type your message here ... "
+                class="form-control"
+              ></textarea>
+            </div>
+            <div class="form-group form-check">
+              <label for="interests" class="form-check-label"
+                >Choose Your Interests</label
+              ><br />
+              <input
+                type="checkbox"
+                name="interests"
+                id="interests"
+                value="athematics"
+                class="form-check-input"
+              />
+              Mathematics
+              <br />
+              <input
+                type="checkbox"
+                name="interests"
+                id="interests"
+                value="coding"
+                checked
+                class="form-check-input"
+              />
+              Coding <br />
+              <input
+                type="checkbox"
+                name="interests"
+                id="interests"
+                value="walking"
+                class="form-check-input"
+              />
+              Walking <br />
+              <input
+                type="checkbox"
+                name="interests"
+                id="interests"
+                value="singing"
+                class="form-check-input"
+              />
+              Singing <br />
+            </div>
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">ID No.</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Department</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Sagnik</td>
+                  <td>Chatterjee</td>
+                  <td>CS</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Richard</td>
+                  <td>Feynmann</td>
+                  <td>Physics</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Leonarhd</td>
+                  <td>Euler</td>
+                  <td>Maths</td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="button" class="btn btn-primary">Submit</button>          
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include Bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab6 | Q3</title>
+  </head>
+  <body>
+    <p>
+      Create a Register page and Success page with the following requirements:
+      i. Register page should contain four input TextBoxes for UserName,
+      Password, Email id and Contact Number and also a button to submit. Make
+      the username as compulsory field and other fields as optional. ii. On
+      button click, Success page is displayed with message "Welcome {UserName}"
+      and also his Email and Contact Number has to be displayed. iii. Use secure
+      technique to send details to the Success page (Hint: use csrftoken)
+    </p>
+    <h2>Q3 Part 2</h2>
+    <hr />
+
+    <p>Welcome <strong>{{ username }},</strong></p>
+    <p>Email-ID: <strong>{{ email }}</strong></p>
+    <p>Contact: <strong>{{ contact }}</strong></p>
+  </body>
+</html>

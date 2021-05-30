@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q2 | Part 2</title>
+  </head>
+  <body>
+    <p>
+      Consider the following tables: WORKS(person-name,Company-name,Salary)
+      LIVES(Person_name, Street, City) Assume Table data suitably. Design a
+      Django webpage and include an option to insert data into WORKS table by
+      accepting data from the user using TextBoxes. Also, include an option to
+      retrieve the names of people who work for a particular company along with
+      the cities they live in (particular company name must be accepted from the
+      user).
+    </p>
+    <form action="portal" method="POST">
+      {% csrf_token %}
+      <table>
+        {{form.as_table}}
+      </table>
+      <br />
+      <input type="submit" value="insert" />
+    </form>
+    <a href="{% url 'home' %}">Go back to home</a>
+  </body>
+</html>

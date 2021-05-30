@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab6 | Q1</title>
+  </head>
+  <body>
+    <p>
+      Develop a web application using Django framework to demonstrate the
+      transfer of multiple parameters between web pages. User should be
+      presented with a dropdown list containing car manufacturers, a text box
+      which takes model name of the manufacturer and a submit button. On
+      submitting the web page, the user is forwarded to a new page. This new
+      page should display the selected car manufacturer name and the model name.
+    </p>
+    <hr />
+    <h2>
+        Part 1 
+    </h2>
+    <form method="POST" action="result">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+
+</body>
+  
+</html>

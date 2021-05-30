@@ -1,0 +1,19 @@
+{% extends "template.html" %} {% block content %}
+<div class="card bg-light">
+  <div class="card-header bg-dark text-white">
+    <h1>Metadata</h1>
+  </div>
+  <div class="card-body bg-light">
+    <h5 class="card-text mb-4">
+      The novel is designed in a way in which the narrative throughout the
+      storyline switches between Mariam and Laila in order to provide readers
+      with a closer look towards their feelings and emotions all through the
+      book. The purpose of the book is to explore the multifaceted difficulties
+      Afghan women tend to face in their everyday lives, such as their lack of
+      rights, their suffering from domestic violence, and their endurance of
+      patriarchal issues.
+    </h5>
+    <a href="{% url 'home'%}" class="btn btn-lg btn-outlineprimary">back</a>
+  </div>
+</div>
+{% endblock content %}

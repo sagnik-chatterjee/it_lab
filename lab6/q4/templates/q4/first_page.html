@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab6 | Q4</title>
+  </head>
+  <body>
+    <p>
+      Design a website with two pages. First page contains: RadioButton with HP,
+      Nokia, Samsung, Motorola, Apple as options. CheckBox with Mobile and
+      Laptop as items. TextBox to enter quantity. There is a button with text as
+      "Produce Bill". On Clicking Produce Bill button, item should be displayed
+      with total amount on another page.
+    </p>
+    <h2>Q4 Part 1 </h2>
+    <hr />
+
+    <form method="POST" action="produce_bill">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Produce Bill</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
+  <title>CRUD Employee Q2</title>
+</head>
+
+<body>
+  <div class="container" style="margin-top: 2rem">
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email ID</th>
+          <th scope="col">Age</th>
+          <th scope="col">Department</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lambda Calculas</td>
+          <td>lambdacalculas@gmail.com</td>
+          <td>21</td>
+          <td>R & D</td>
+          <td>
+            <button class="btn btn-primary" value="showAlert" onclick="shouldEdit();">
+              Edit
+            </button>
+            <button class="btn btn-danger" value="showAlert" onclick="showDelete();">
+              Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Bernhard Reimann</td>
+          <td>breimann@gmail.com</td>
+          <td>41</td> 
+          <td>Human Resources</td>
+          <td>
+            <button class="btn btn-primary" value="showAlert" onclick="shouldEdit();">
+              Edit
+            </button>
+            <button class="btn btn-danger" value="showAlert" onclick="showDelete();">
+              Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Tom Hardy</td>
+          <td>th1425@gmail.com</td>
+          <td>23</td>
+          <td>Administration</td>
+          <td>
+            <button class="btn btn-primary" value="showAlert" onclick="shouldEdit();">
+              Edit
+            </button>
+            <button class="btn btn-danger" value="showAlert" onclick="showDelete();">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <div class="container" style="background: orange; margin-top: 1rem">
+    <div class="row justify-content-md-center" style="padding: 1rem">
+      <div class="col-md-12">
+        <p class="text-center font-weight-bold" style="font-size: 2rem">
+          Employee ADD
+        </p>
+      </div>
+      <div class="col-md-6">
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Ex : John Doe" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Ex:  john.doe@xyz.com" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label><br />
+            <input type="number" name="age" id="age" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="dept">Choose Department</label><br />
+            <input type="radio" name="dept" id="dept" value="ad" checked />
+            Administration <br />
+            <input type="radio" name="dept" id="dept" value="rd" /> R & D
+            <br />
+            <input type="radio" name="dept" id="dept" value="hr" /> Human Resources
+            <br />
+            <input type="radio" name="dept" id="dept" value="finance" /> Finance
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Include Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

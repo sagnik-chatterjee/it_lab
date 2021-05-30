@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab6 | Q2</title>
+  </head>
+  <body>
+    <p>
+      Create a page firstPage.html with two TextBoxes [Name, Roll], DropDownList
+      [Subjects], and a button. Create another page secondPage.html with a label
+      and a button. When the user clicks the button in first Page, he should be
+      sent to the second page and display the contents passed from first page in
+      the label. The button in second page should navigate the user back to
+      firstPage. Use Django sessions to transfer information.
+    </p>
+    <h2>Q2 | Part 2</h2>
+    <hr />
+
+    <p>Name: <strong>{{ name }}</strong></p>
+    <p>Roll: <strong>{{ roll }}</strong></p>
+    <p>Subject: <strong>{{ subject }}</strong></p>
+
+    <form method="GET" action="index">
+      <button type="submit">First Page</button>
+    </form>
+  </body>
+</html>

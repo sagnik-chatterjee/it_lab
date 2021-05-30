@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="calc.js"></script>
+  </head>
+  <body>
+    <div class="title">Calculator:- Solving using jQuery</div>
+    <table style="width: auto">
+      <tr>
+        <div class="button1">
+          <td colspan="3"><input type="text" id="result" /></td>
+          <td><input type="button" value="c" onclick="clr()" /></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="button2">
+          <input type="button" value="1" id="One" onclick="getVal('1')" />
+          <input type="button" value="2" id="Two" onclick="getVal('2')" />
+          <input type="button" value="3" id="Three" onclick="getVal('3')" />
+          <input type="button" value="4" id="Four" onclick="getVal('4')" />
+          <input type="button" value="5" id="Five" onclick="getVal('5')" />
+          <input type="button" value="6" id="Six" onclick="getVal('6')" />
+          <input type="button" value="7" id="Seven" onclick="getVal('7')" />
+          <input type="button" value="8" id="Eight" onclick="getVal('8')" />
+          <input type="button" value="9" id="Nine" onclick="getVal('9')" />
+          <input type="button" value="0" id="Zero" onclick="getVal('0')" />
+        </div>
+        <div class="button3">
+          <input type="button" value="-" id="Minus" onclick="getVal('-')" />
+          <input type="button" value="+" id="One" onclick="getVal('7')" />
+          <input type="button" value="/" id="Two" onclick="getVal('8')" />
+          <input type="button" value="*" id="Three" onclick="getVal('9')" />
+          <input type="button" value="." id="One" onclick="getVal('.')" />
+          <input type="button" value="0" id="Two" onclick="getVal('0')" />
+          <input type="button" value="=" id="Three" onclick="calculate()" />
+          <input type="button" value="*" id="Three" onclick="getVal('*')" />
+        </div>
+      </tr>
+    </table>
+  </body>
+</html>

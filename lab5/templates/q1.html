@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Q1 Teacher Form</h2>
+<form>
+  <label>Name:</label><br />
+  <input type="text" id="nm" /><br />
+  <label>Date Of Birth:</label><br />
+  <input type="date" id="dob" /><br />
+  <label>Contact Number: </label><br />
+  <input type="number" id="cnum" /><br />
+  <label>E-mail: </label><br />
+  <input type="email" id="smail" /><br />
+  <label>-------MARKS-----------</label>
+  <br /><label>English Marks : </label><br />
+  <input type="number" id="emark" /><br />
+  <label>Physics Marks: </label><br />
+  <input type="number" id="pmark" /><br />
+  <label>Chemistry Marks : </label><br />
+  <input type="number" id="cmark" /><br />
+  <button type="button" onclick="checkMarks()">Submit</button>
+</form>
+<br />
+<pre id="det" style="display: none"></pre>
+<label id="avg_marks"></label>
+<script>
+  function checkMarks() {
+    document.getElementById("det").style.display = "none";
+    document.getElementById("det").innerHTML = " ";
+    document.getElementById("avg_marks").innerHTML = " ";
+    var s_name = document.getElementById("nm").value;
+    var s_dob = document.getElementById("dob").value;
+    var s_contact = document.getElementById("cnum").value;
+    var s_email = document.getElementById("smail").value;
+    var e_marks = parseInt(document.getElementById("emark").value);
+    var p_marks = parseInt(document.getElementById("pmark").value);
+    var c_marks = parseInt(document.getElementById("cmark").value);
+    var avg = ((e_marks + p_marks + c_marks) * 100) / 300;
+    var data = `
+                    ************* RESULTS ******************
+                    Name of the student: ${s_name}\n
+                    Date of Birth: ${s_dob}\n
+                    Contact Number: ${s_contact}\n
+                    E-mail ID: ${s_email}\n
+                    -------Marks-------
+                    English Marks :${e_marks}
+                    Physics Marks :${p_marks}
+                    Chemistry Marks :${c_marks}
+
+                    The average marks of the Subjects is:- ${avg} %
+                `;
+    document.getElementById("det").style.display = "block";
+    document.getElementById("det").innerHTML = data;
+    //document.getElementById('avg_marks').innerHTML = avg
+  }
+</script>
+{% endblock content %}

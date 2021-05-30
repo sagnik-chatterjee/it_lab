@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q1| Page 1</title>
+  </head>
+  <body>
+    <p>
+      Design a web site using Django, which is a website directory – A site
+      containing links to other websites. A web page has different categories. •
+      A category table has a name, number of visits, and number of likes. • A
+      page table refers to a category, has a title, URL, and many views. Design
+      a form that populates the above database and displays it.
+    </p>
+    <form action="" method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <input type="submit" />
+    </form>
+  </body>
+</html>

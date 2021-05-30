@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Price List</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="q4.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <p>
+    <table style='width:100%'>
+       <caption><h2>Price List of Mobiles and Phones</h2></caption>
+      <tr>
+        <td>Brand</td>
+        <td>Laptop</td>
+        <td>Mobile</td>
+      </tr>
+      <tr>
+        <td>HP</td>
+        <td>7500</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>Nokia</td>
+        <td>5550</td>
+        <td>450</td>
+      </tr>
+      <tr>
+        <td>Samsung</td>
+        <td>6000</td>
+        <td>800</td>
+      </tr>
+      <tr>
+        <td>Motorola</td>
+        <td>2500</td>
+        <td>700</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>3000</td>
+        <td>560</td>
+      </tr>
+    </table>
+  </p>
+  <label for="brand-choice">Choose a Brand:</label>
+  <input list="brands" id="brand-choice" name="brand-choice" />
+  <datalist id="brands">
+    <option value="HP"></option>
+    <option value="Nokia"></option>
+    <option value="Samsung"></option>
+    <option value="Motorola"></option>
+    <option value="Apple"></option>
+  </datalist>
+  <p>Choose:</p>
+  <div>
+    <input type="checkbox" id="laptop" name="laptop" checked>
+    <label for="laptop">Laptop</label>
+  </div>
+  <div>
+    <input type="checkbox" id="mobile" name="mobile">
+    <label for="mobile">Mobile</label>
+  </div>
+  <div>
+    <label for="quantity">Quantity</label>
+    <input type="text" id="quantity" name="quantity" required>
+  </div>
+  <button id="bill">Bill Amount</button>
+  <p id="write-bill"></p>
+</body>
+</html>
+
+

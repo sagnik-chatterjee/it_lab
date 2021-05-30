@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Employee Operations Q2</h1>
+<label for="employee ">Choose a employee id:</label>
+<select id="employee_id">
+  <option value="180905478">180905478</option>
+  <option value="180906478">180906478</option>
+  <option value="180907478">180907478</option>
+  <option value="180953086">180953086</option>
+</select>
+<br />
+<h2>Date of Joining :</h2>
+<br />
+<input type="date" id="doj" />
+<button type="button" onclick="checkEligible()">Is Eligible ?</button>
+<h1 id="control"></h1>
+<script>
+  function checkEligible() {
+    var doj = document.getElementById("doj").value;
+    var emp = document.getElementById("employee_id").value;
+    var curr_dt = new Date();
+    var doj_new = new Date(doj);
+    var diff = (curr_dt.getTime() - doj_new.getTime()) / 1000;
+    diff /= 60 * 60 * 24;
+    var ans = Math.abs(Math.round(diff / 365.25));
+    if (ans > 5) {
+      document.getElementById(
+        "control"
+      ).innerHTML = `${emp} is Eligible For Promotion`;
+    } else {
+      document.getElementById(
+        "control"
+      ).innerHTML = `${emp} is not Eligible For Promotion`;
+    }
+  }
+</script>
+{% endblock content %}

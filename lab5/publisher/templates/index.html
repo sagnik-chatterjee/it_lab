@@ -1,0 +1,21 @@
+{% extends "template.html" %} {% block content %}
+<div class="card">
+  <div class="card-header">
+    <h1>Publisher</h1>
+  </div>
+  <div class="card-body">
+    <h5 class="card-text mb-4">
+      Born in Kabul, Afghanistan, Hosseini's father was a diplomat; after
+      periods living in Iran and France, when Hosseini was 15, his family
+      applied for asylum in the United States, where he later became a
+      naturalised citizen. Hosseini did not return to Afghanistan until 2000
+      when he was 36, where he likened the experience to feeling "like a tourist
+      in [his] own country". In subsequent interviews, Hosseini has admitted to
+      feeling survivor's guilt for having been able to leave the country prior
+      to the Soviet invasion and subsequent wars.
+    </h5>
+    <a href="{% url 'home'%}" class="btn btn-lg btn-outlineprimary">back</a>
+  </div>
+</div>
+{% endblock content %}
+ 

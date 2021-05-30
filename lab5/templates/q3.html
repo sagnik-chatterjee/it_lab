@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Calculator Operations Q3</h1>
+
+<label>Enter Number1:</label>
+<input type="number" id="num_1" /><br /><br />
+<label>Enter Number2:</label>
+<input type="number" id="num_2" /><br /><br />
+<label>Operation</label>
+
+<select id="operation_id">
+  <option selected value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<br />
+<button type="button" onclick="checkOperations()">Calculate Result :</button>
+<h1 id="control"></h1>
+<script>
+  function checkOperations() {
+    var num1 = parseInt(document.getElementById("num_1").value);
+    var num2 = parseInt(document.getElementById("num_2").value);
+    var op = document.getElementById("operation_id").value;
+    if (op === "+") {
+      var ans = num1 + num2;
+      document.getElementById(
+        "control"
+      ).innerHTML = ` The result is :- ${num1} ${op} ${num2} := ${ans}`;
+    } else if (op === "-") {
+      var ans = num1 - num2;
+      document.getElementById(
+        "control"
+      ).innerHTML = ` The result is :- ${num1} ${op} ${num2} := ${ans}`;
+    } else if (op === "*") {
+      var ans = num1 * num2;
+      document.getElementById(
+        "control"
+      ).innerHTML = ` The result is :- ${num1} ${op} ${num2} := ${ans}`;
+    } else {
+      var ans = num1 / num2;
+      document.getElementById(
+        "control"
+      ).innerHTML = ` The result is :- ${num1} ${op} ${num2} := ${ans}`;
+    }
+  }
+</script>
+{% endblock content %}

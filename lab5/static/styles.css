@@ -1,0 +1,33 @@
+div.form-group {
+    background-color: purple;
+    margin-top:100px;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid yellow;
+    float: left;
+    width: 180px;
+}
+div.gallery:hover {
+    border: 1px solid rebeccapurple;
+    }
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    }
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+canvas #myCanvas {
+    width: 1000px;
+    height: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}

@@ -1,70 +1,38 @@
-"""
-from django.contrib.auth.decorators import user_passes_test
-from django.shortcuts import redirect, render_to_response, get_object_or_404, render
-from django.views.generic.dates import MonthArchiveView, WeekArchiveView
+from django.shortcuts import render
+from django.http import request
 
-from .models import Post
-from .forms import PostForm, CommentForm
-
-
-@user_passes_test(lambda u: u.is_superuser)
-def add_post(request):
-    form = PostForm(request.POST or None)
-    if form.is_valid():
-        post = form.save(commit=False)
-        post.author = request.user
-        post.save()
-        return redirect(post)
-    return render(request, "blog/add_post.html", {"form": form})
-
-
-def view_post(request, slug):
-    post = get_object_or_404(Post, slug=slug)
-    form = CommentForm(request.POST or None)
-    if form.is_valid():
-        comment = form.save(commit=False)
-        comment.post = post
-        comment.save()
-        request.session["name"] = comment.name
-        request.session["email"] = comment.email
-        request.session["website"] = comment.website
-        return redirect(request.path)
-    form.initial["name"] = request.session.get("name")
-    form.initial["email"] = request.session.get("email")
-    form.initial["website"] = request.session.get("website")
-    return render(
-        request,
-        "blog/blog_post.html",
-        {
-            "post": post,
-            "form": form,
-        },
-    )
-
-
-class PostMonthArchiveView(MonthArchiveView):
-    queryset = Post.objects.all()
-    date_field = "created_on"
-    allow_future = True
-
-
-class PostWeekArchiveView(WeekArchiveView):
-    queryset = Post.objects.all()
-    date_field = "created_on"
-    week_format = "%W"
-    allow_future = True
-"""
+# Create your views here.
+from .models import *
+from .serializers import *
 from rest_framework import generics
-
-from . import models
-from . import serializers
+import getpass
 
 
-class BlogList(generics.ListAPIView):
-    queryset = models.Blog.objects.all()
-    serializer_class = serializers.BlogSerializer
+class ListBlogs(generics.ListCreateAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
 
-class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.Blog.objects.all()
-    serializer_class = serializers.BlogSerializer
+class DetailBlog(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
+
+
+class ListComment(generics.ListCreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
+
+class DetailComment(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
+
+class ListUser(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+class DetailUser(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
